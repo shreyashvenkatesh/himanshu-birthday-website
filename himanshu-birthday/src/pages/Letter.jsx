@@ -45,7 +45,7 @@ function Letter({ onRestart }) {
               <p className="letter-salutation">Dear Motu,</p>
 
               <p className="letter-body">
-                Happy Birthday! I wanted to build smth which makes you feel more special, but i couldn't (im really sorryyy ☹️) also i even told you about this specific surprise, but well here it is, i hope you liked it.
+                Happy Birthday! I wanted to build smth which makes you feel more special, but i couldn't (im really sorryyy ☹️) also i even told you about this specific surprise, but well here it is, i hope you'll like it.
               </p>
 
               <p className="letter-body">
