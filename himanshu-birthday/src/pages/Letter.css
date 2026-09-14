@@ -1,0 +1,172 @@
+.letter-container {
+  min-height: 100vh;
+  background: transparent;
+  padding: 60px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.letter-decor-lily {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 160px;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.letter-decor-lily img {
+  width: 100%;
+  height: auto;
+  transform: rotate(-10deg);
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.letter-subtitle {
+  font-family: "Parisienne", cursive;
+  font-size: 28px;
+  color: #81706d;
+}
+
+.letter-header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 6vw, 62px);
+  color: #514845;
+  font-weight: 500;
+}
+
+.envelope-wrapper {
+  max-width: 580px;
+  width: 100%;
+  perspective: 1000px;
+}
+
+/* Closed Envelope State */
+.envelope-closed {
+  background: #fffaf5;
+  padding: 80px 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(81, 72, 69, 0.15);
+  box-shadow: 0 20px 45px rgba(81, 72, 69, 0.1);
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.envelope-closed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 60px rgba(81, 72, 69, 0.16);
+}
+
+.tape-top {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+}
+
+.tape-top img {
+  width: 100%;
+  opacity: 0.85;
+}
+
+.wax-seal {
+  width: 65px;
+  height: 65px;
+  background: #81706d;
+  color: #fffaf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 16px rgba(129, 112, 109, 0.35);
+}
+
+.seal-prompt {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #6a605c;
+  letter-spacing: 0.5px;
+}
+
+/* Opened Letter State */
+.letter-paper {
+  background: #fffaf5;
+  padding: 50px 40px;
+  border-radius: 2px;
+  border: 1px solid rgba(81, 72, 69, 0.12);
+  box-shadow: 0 25px 65px rgba(81, 72, 69, 0.12);
+  animation: letterUnroll 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.letter-content {
+  font-family: "Cormorant Garamond", serif;
+  color: #514845;
+}
+
+.letter-salutation {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.letter-body {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #625955;
+  margin-bottom: 20px;
+}
+
+.letter-closing {
+  font-size: 22px;
+  margin-top: 35px;
+  color: #514845;
+}
+
+.letter-closing span {
+  font-family: "Parisienne", cursive;
+  font-size: 30px;
+  color: #81706d;
+}
+
+.letter-footer {
+  margin-top: 50px;
+}
+
+.restart-btn {
+  border: 1px solid rgba(81, 72, 69, 0.3);
+  background: transparent;
+  color: #514845;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.restart-btn:hover {
+  background: #514845;
+  color: #f7f0e8;
+}
+
+@keyframes letterUnroll {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

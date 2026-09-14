@@ -1,0 +1,41 @@
+.cute-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cute-bg-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.cute-bg-frame.active {
+  opacity: 0.82; /* Makes background photos clear and visible */
+}
+
+.cute-bg-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Light overlay so the image shows through clearly */
+.cute-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(243, 235, 226, 0.2);
+  z-index: 1;
+}

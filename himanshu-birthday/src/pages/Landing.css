@@ -1,0 +1,87 @@
+.landing-container {
+  min-height: 100vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-decor-lily {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 170px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.landing-decor-lily img {
+  width: 100%;
+  height: auto;
+  transform: rotate(15deg);
+}
+
+.landing-card {
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+  padding: 60px 40px;
+  background: rgba(255, 250, 245, 0.85);
+  border: 1px solid rgba(81, 72, 69, 0.12);
+  box-shadow: 0 25px 70px rgba(81, 72, 69, 0.08);
+  backdrop-filter: blur(8px);
+  animation: landingFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.landing-subtitle {
+  font-family: "Parisienne", cursive;
+  font-size: 32px;
+  color: #81706d;
+  margin-bottom: 8px;
+}
+
+.landing-card h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 7vw, 68px);
+  font-weight: 500;
+  color: #514845;
+  margin-bottom: 24px;
+}
+
+.landing-description {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #6a605c;
+  margin-bottom: 38px;
+}
+
+.landing-btn {
+  border: 1px solid rgba(81, 72, 69, 0.4);
+  background: transparent;
+  color: #514845;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.landing-btn:hover {
+  background: #514845;
+  color: #f7f0e8;
+  transform: translateY(-2px);
+}
+
+@keyframes landingFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
